@@ -3,7 +3,9 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: True
 chapters:
-- file: 1_Einführung
-- file: 2_Warum_Python
+- file: Einführung
+- file: Warum_Python
 - file: notebooks

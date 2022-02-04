@@ -1,3 +1,3 @@
-# Datenanalyse - Eine Einführung
+# Willkommen
 
-Hier folgt noch ganz viel Inhalt!
+![](mylogo.png)

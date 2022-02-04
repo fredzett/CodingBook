@@ -1,4 +1,4 @@
-# 02 Warum Python
+# Warum Python
 
 Hier folgt noch ganz viel anderes
 
