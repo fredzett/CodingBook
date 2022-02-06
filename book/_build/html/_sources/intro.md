@@ -1,3 +1,3 @@
 # Willkommen
 
-![](mylogo.png)
+Hier folgt ein Buch!
