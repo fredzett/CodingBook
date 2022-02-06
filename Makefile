@@ -1,6 +1,9 @@
-build:
-	jupyter-book build book
+clean:
+	jupyter-book clean book/ --all
 
+build: clean
+	jupyter-book build book
+	
 publish:
 	ghp-import -n -p -f book/_build/html
 
