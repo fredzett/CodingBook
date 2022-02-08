@@ -1,61 +1,46 @@
 # Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
+title: Datenanalyse für BWLer
+author: Felix Zeidler
+copyright: ""  # Copyright year to be placed in the footer
+logo: logo.gif
+email: "felix.zeidler@fh-bielefeld.de"
 
-title: Datenanalyse - Eine Einführung für BWLer
-author: Coding and Data
-logo: "" #mylogo.png
-
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
+latex:
+  latex_documents:
+    targetname: book.tex
+#######################################################################################
+# HTML-specific settings
+html:
+  favicon                   : "logo.gif"  # A path to a favicon image
+  use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_repository_button     : false  # Whether to add a link to your repository button
+  use_issues_button         : false  # Whether to add an "open an issue" button
+  #google_analytics_id       : "UA-60403888-2"  # A GA id that can be used to track book views.
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  baseurl                   : "https://fredzett.github.io/CodingBook/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  #extra_footer: |
+  #  <p>
+  #  <a href="https://www.buymeacoffee.com/dearc" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
+  #  <a href="https://dearc.medium.com/membership" target="_blank"><img src="https://img.shields.io/badge/Support-Medium%20Referral-lightgrey?style=flat-square&logo=appveyor.svg" alt="Medium Membership"></a>
+  #  <a href="https://www.linkedin.com/company/the-data-science-interview-book/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BeglbXB3xT0mopZBzReqMEQ%3D%3D" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
+  #  <a href="https://github.com/dipranjan/dsinterviewqns/discussions" target="_blank"><img src="https://img.shields.io/badge/Discussion%20Forum-%F0%9F%99%8A%20%20%F0%9F%99%88%20%20%F0%9F%99%89-0172B3?style=flat-square&logo=appveyor.svg" alt="Discussion Forum"></a>
+  #  </p>
+  comments:
+    hypothesis              : false
+    utterances              : false
+repository:
+  url                       : https://github.com/fredzett/CodingBook  # The URL to your book's repository
+  path_to_book              : ""  # A path to your book's folder, relative to the repository root.
+  branch                    : main  # Which branch of the repository should be used when creating links
 execute:
-  execute_notebooks: force
-
-
+  execute_notebooks         : force  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  cache                     : ""  # A path to the jupyter cache that will be used to store execution artifacs. Defaults to `_build/.jupyter_cache/`
 sphinx:
   config:
-    html_theme: quantecon_book_theme
-    html_theme_options:
-      header_organisation_url: https://www.fh-bielefeld.de
-      header_organisation: FH Bielefeld
-      repository_url: https://github.com/fredzett/CodingBook
-      repository_branch: main
-      launch_buttons:
-        colab_url: https://colab.research.google.com
-        binderhub_url: https://mybinder.org
-      persistent_sidebar: true
-      use_repository_button: false
-      use_launch_button: true
-      navbar_footer_text: "Dies ist ein Test"
-      #nb_repository_url: https://github.com/QuantEcon/lecture-python-advanced.notebooks
-      #twitter: quantecon
-      #twitter_logo_url: https://assets.quantecon.org/img/qe-twitter-logo.png
-      #og_logo_url: https://assets.quantecon.org/img/qe-og-logo.png
-      #description: This website presents a set of lectures on advanced quantitative economic modeling, designed and written by Thomas J. Sargent and John Stachurski.
-      #keywords: Python, QuantEcon, Quantitative Economics, Economics, Sloan, Alfred P. Sloan Foundation, Tom J. Sargent, John Stachurski
-      #google_analytics_id: UA-54984338-11
-
-
-# Define the name of the latex output file for PDF builds
-#latex:
-#  latex_documents:
-#    targetname: book.tex
-
-# Add a bibtex file so that we can create citations
-#bibtex_bibfiles:
-#  - references.bib
-
-# Information about where the book exists on the web
-#repository:
-#  url: https://github.com/fredzett/codingbook  # Online location of your book
-#  path_to_book: book  # Optional path to your book, relative to the repository root
-#  branch: main # master  # Which branch of the repository should be used when creating links (optional)
-
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-#html:
-#  use_issues_button: false
-#  use_repository_button: false
-
-#launch_buttons:
-#  colab_url: "https://colab.research.google.com"
-#  binderhub_url: ""
+    html_baseurl            : 'https://fredzett.github.io/CodingBook/'
+    html_show_copyright     : false
+  #extra_extensions:
+  #  - sphinx_sitemap
+launch_buttons:
+  colab_url: https://colab.research.google.com
+  binderhub_url: ""

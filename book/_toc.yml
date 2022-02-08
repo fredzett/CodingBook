@@ -2,10 +2,17 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: contents/intro
 options:
   numbered: True
-chapters:
-- file: Einführung
-- file: Warum_Python
-- file: notebooks
+parts:
+- caption: Vorwort
+  chapters:
+  - file: contents/ToWhom
+- caption: Einleitung
+  chapters:
+  - file: contents/Warum Python?
+  - file: contents/Technisches Setup
+- caption: Einführung in Python
+  chapters:
+    - file: contents/Basics
