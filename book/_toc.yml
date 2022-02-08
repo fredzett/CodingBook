@@ -16,3 +16,4 @@ parts:
 - caption: Einführung in Python
   chapters:
     - file: contents/Basics
+    - file: contents/Interactive
