@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Willkommen &#8212; Datenanalyse für BWLer</title>
+    <title>Datenanalyse</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -44,6 +44,8 @@
     <script src="../_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -76,9 +78,12 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
       
       
-      <h1 class="site-logo" id="site-title">Datenanalyse für BWLer</h1>
+      <img src="../_static/logo3.gif" class="logo" alt="logo">
+      
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -89,7 +94,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   Willkommen
+   Datenanalyse
   </a>
  </li>
 </ul>
@@ -131,6 +136,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Basics.html">
    Erste Schritte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Interactive.html">
+   Lineare Regression
   </a>
  </li>
 </ul>
@@ -199,6 +209,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausgangslage">
+   Ausgangslage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ziele-dieses-buchs">
+   Ziele dieses Buchs
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -206,20 +234,56 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Willkommen</h1>
+                <h1>Datenanalyse</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausgangslage">
+   Ausgangslage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ziele-dieses-buchs">
+   Ziele dieses Buchs
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="willkommen">
-<h1>Willkommen<a class="headerlink" href="#willkommen" title="Permalink to this headline">¶</a></h1>
-<p>Hier folgt ein Buch!</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="datenanalyse">
+<h1>Datenanalyse<a class="headerlink" href="#datenanalyse" title="Permalink to this headline">¶</a></h1>
+<p><img alt="HeaderPic" src="../_images/Pic1.png" /></p>
+<div class="section" id="ausgangslage">
+<h2>Ausgangslage<a class="headerlink" href="#ausgangslage" title="Permalink to this headline">¶</a></h2>
+<p>Der digitale Wandel verändert im hohen Tempo Anforderungen an Fähigkeiten, Fertigkeiten und Wissen von Mitarbeitern. Aufgrund der signifikant steigenden Datenverfügbarkeit wird vor allem der Umgang mit Daten für Arbeitnehmer der Zukunft immer wichtiger. So ist es kein Zufall, dass der Stifterverband die „Datenkompetenz“ (Data Literacy) als sogenannten „Future Skill“ definiert.</p>
+<p>Mitarbeiter der <code class="docutils literal notranslate"><span class="pre">Zukunft</span></code> müssen aus immer größeren Datenmengen (entscheidungs-)relevante Informationen extrahieren und diese adressatengerecht kommunizieren können. Die so In der Praxis mangelt es an Experten, die diese Fähigkeiten beherrschen. Eine zusätzliche Komplexität entsteht dadurch, dass Datenexpertise alleine oft nicht ausreicht. Vielmehr ist es die Kombination aus Fach- (z.B. BWL) und Datenexpertise die es Unternehmen hilft, datengestützte Entscheidungen zu treffen, die wertstiftend sind.</p>
+<p><strong>Beispiel:</strong> Ein Unternehmen wie z.B. Zalando hat unzählige Informationen über Produkte und Kunden. Welche Produkte waren am beliebtesten? Welche Produkte haben Personen, die weiße Hemden in den Warenkorb packten als nächstes angeklickt? Welche Produktinformationen haben geholfen, um die Rücksendequote zu reduzieren? etc.
+Die verfügbaren Daten können und sollten aus betriebswirtschaftlicher Sicht natürlich genutzt werden. Hierfür bedarf es aber offensichtlich einer Kombination aus betriebswirtschaftlichem Know-How und Datenkompetenz, da die Datenmengen so groß sind, dass (i) die Antworten auf die Fragen nicht auf den ersten Blick ersichtlich sind und (ii) oft nicht ersichtlich ist, welche Fragen überhaupt gestellt werden sollten.</p>
+<p>Insbesondere in der Fachdisziplin “Betriebswirtschaftslehre” mangelt es jedoch an Experten im Bereich Datenanalyse  (siehe hierzu z.B. eine <a class="reference external" href="https://www.dropbox.com/s/sje54909pdl9579/20171017%20WiWo.pdf?dl=0">Titelstory</a> der Wirtschaftswoche aus Oktober 2017)</p>
+<p>Dieses Seminar hat deshalb zum <strong>Ziel den Teilnehmern den immer wichtiger werdenden Bereich der Datenanalyse</strong> näher zu bringen und somit einen ersten Schritt zu machen in Richtung Ausbildung von betriebswirtschaftlichen Fachexperten im Bereich Datenkompetenz.</p>
+</div>
+<div class="section" id="ziele-dieses-buchs">
+<h2>Ziele dieses Buchs<a class="headerlink" href="#ziele-dieses-buchs" title="Permalink to this headline">¶</a></h2>
+<p>Ganz konkret verfolgt das Seminar <strong>drei Ziele</strong></p>
+<ol class="simple">
+<li><p>Einfühurng in Jupyter Notebooks</p></li>
+<li><p>Einführung in die Programmierung mit Python</p></li>
+<li><p>Einführung in die Datenanalyse</p></li>
+</ol>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
